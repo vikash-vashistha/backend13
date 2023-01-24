@@ -36,6 +36,7 @@ router.delete("/:id", async (req, res) => {
 });
 
 router.get("/", async (req, res) => {
+  console.log("req.query");
   try {
     let item;
     let { id } = req.query;
