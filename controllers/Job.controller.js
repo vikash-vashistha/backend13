@@ -39,9 +39,9 @@ router.get("/", async (req, res) => {
   try {
     let item;
     let { id } = req.query;
-    // console.log(city);
+    console.log(id);
     if (id) {
-      item = await Location.find({ company_name: new RegExp(id, "i") })
+      item = await Job.find({ company_name: new RegExp(id, "i") })
         .lean()
         .exec();
       // console.log(Cities, req.query.city);
